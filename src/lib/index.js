@@ -1,9 +1,25 @@
+import { cursorState } from "./state.svelte";
+
 export { default as Button } from "./shared/Button.svelte";
 
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { SplitText } from "gsap/SplitText";
+export function activeDiv(node, message = 'Hello there!') {
 
-// gsap.registerPlugin(ScrollTrigger, SplitText);
+    node.addEventListener('mouseenter', () => {
+        cursorState.message = message;
+        cursorState.popupActive = true
+    });
+    node.addEventListener('mouseleave', () => {
+        cursorState.popupActive = false
+    });
 
-// export { gsap, ScrollTrigger, SplitText };
+    return {
+        destroy() {
+            node.removeEventListener('mouseenter', () => {
+                cursorState.popupActive = true
+            });
+            node.removeEventListener('mouseleave', () => {
+                cursorState.popupActive = false
+            });
+        }
+    };
+}

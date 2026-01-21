@@ -6,6 +6,7 @@
 
 	import MorphSVGPlugin from 'gsap/MorphSVGPlugin';
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 
 	let xSVG = $state(null);
 	let menuSVG = $state(null);
@@ -19,7 +20,7 @@
 			iconFilled: 'ph:house-fill'
 		},
 		{
-			href: '/places',
+			href: '/places/of-gods-gears-and-ghee-roast',
 			label: 'Places',
 			icon: 'ph:map-pin-duotone',
 			iconFilled: 'ph:map-pin-fill'
@@ -65,6 +66,12 @@
 			overlayActive = true;
 		}
 	}
+
+	afterNavigate((navigation) => {
+		if (overlayActive) {
+			toggleMenu();
+		}
+	});
 
 	onMount(() => {
 		gsap.registerPlugin(MorphSVGPlugin);

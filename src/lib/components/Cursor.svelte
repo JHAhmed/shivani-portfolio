@@ -6,9 +6,12 @@
 	import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
 	import { quintInOut } from 'svelte/easing';
 	import { cursorState } from '$lib/state.svelte';
-	import { scale as svelteScale } from 'svelte/transition';
+	import { draw, scale as svelteScale } from 'svelte/transition';
 
 	let { isActive } = $props();
+
+	let normalCursor = $state(null);
+	let customCursor = $state(null);
 
 	let x = $state(0);
 	let y = $state(0);
@@ -111,6 +114,7 @@
 	});
 
 	onMount(() => {
+
 		gsap.registerPlugin(DrawSVGPlugin);
 
 		const animate = () => {
@@ -163,24 +167,40 @@
 		<!-- <Icon icon="fluent:cursor-16-filled" class="size-8" /> -->
 		<!-- <img src="{cursorSvg}" alt="Cursor Icon" class="size-8 mix-blend-difference border-8" /> -->
 
+	
 		<svg
+		 	
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 128 128"
 			class="size-8 mix-blend-difference transition-transform duration-200 {cursorState.isPointer
 				? 'scale-125'
 				: ''}"
 			><path
+				bind:this={normalCursor}
 				class="cursor {cursorState.isPointer
 					? 'cursor-pointer-state fill-gray-400 stroke-[7px]'
 					: 'fill-secondary'}"
-				d="M104.36,85.1l-37.83-.5a8.81,8.81,0,0,0-7.41,3.82l-22,32c-5.19,7.55-17,3.27-17.5-6.34L14.56,13.67c-.29-5.55,3.78-10,9.08-9.92a9.91,9.91,0,0,1,5.85,2.08L109.2,67.11C116.85,73,113.57,85.23,104.36,85.1Z"
-				 />
+				d="M104.36,85.1l-37.83-.5a8.81,8.81,0,0,0-7.41,3.82l-22,32c-5.19,7.55-17,3.27-17.5-6.34L14.56,13.67c-.29-5.55,3.78-10,9.08-9.92a9.91,9.91,0,0,1,5.85,2.08L109.2,67.11C116.85,73,113.57,85.23,104.36,85.1Z" />
 		</svg>
-		
+
+		<!-- {#if cursorState.customActive}
+			<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" class="size-8 mix-blend-difference transition-transform duration-200 {cursorState.isPointer
+				? 'scale-125'
+				: ''}"
+				><path 
+					bind:this={customCursor}
+					fill="none"
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="m1.5 9l16-6.535L14.7 17zm16-6.5l-11 10m0 0v5l3-3"
+					stroke-width="1" /></svg>
+		{/if} -->
+
 		{#if cursorState.popupActive}
 			<div
 				transition:svelteScale={{ duration: 300, easing: quintInOut }}
-				class="absolute top-6 left-2 w-40 text-center rounded-full border-2 border-black bg-secondary px-4 py-2  shadow-lg">
+				class="absolute top-6 left-2 w-40 rounded-full border-2 border-black bg-secondary px-4 py-2 text-center shadow-lg">
 				<p class="font-medium text-black">{cursorState.message}</p>
 			</div>
 		{/if}
