@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-sans: 'Urbanist', 'sans-serif';
+	--font-handwriting: 'Caveat', 'cursive';
+	--color-primary: #EA4142;
+	--color-secondary: #A2F442;
+
+	--spacing-9xl: 88rem;
+	--spacing-10xl: 96rem;
+	--spacing-11xl: 104rem;
+	--spacing-12xl: 112rem;
+
+	--radius-5xl: 3rem;
+	--radius-6xl: 4rem;
+}
+
+@utility hard-shadow-sm {
+	--tw-shadow: 2px 2px 0px var(--tw-shadow-color, #000000);
+	box-shadow:
+		var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow),
+		var(--tw-ring-shadow), var(--tw-shadow);
+	transform: translate(-0.1rem, -0.1rem);
+	border-color: var(--tw-shadow-color, #000000);
+}
+
+@utility hard-shadow-md {
+	--tw-shadow: 3px 3px 0px var(--tw-shadow-color, #000000);
+	box-shadow:
+		var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow),
+		var(--tw-ring-shadow), var(--tw-shadow);
+	transform: translate(-0.15rem, -0.15rem);
+	border-color: var(--tw-shadow-color, #000000);
+}
+
+@utility hard-shadow-base {
+	--tw-shadow: 4px 4px 0px var(--tw-shadow-color, #000000);
+	box-shadow:
+		var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow),
+		var(--tw-ring-shadow), var(--tw-shadow);
+	transform: translate(-0.25rem, -0.25rem);
+	border-color: var(--tw-shadow-color, #000000);
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #424242;
+	border-radius: 10px;
+	border: 2px solid #ffffff;
+}
+
+.dark *::-webkit-scrollbar-track {
+	background: #030712;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+	background: #ffffff;
+	border: 2px solid #030712;
+}
+
+html {
+	/* cursor: url('./lib/assets/cursor2.svg'), auto; */
+	cursor: none;
+}
+
+* {
+  cursor: none !important;
+}
