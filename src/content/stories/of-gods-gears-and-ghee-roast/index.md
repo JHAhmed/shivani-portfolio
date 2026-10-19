@@ -3,8 +3,10 @@ title: "Of Gods, Gears and Ghee Roast"
 dek: "This week, we travelled down South to Coimbatore, to walk through where Greeks and Romans once traded, hear the iora’s haunting call, eat biriyani worth switching sides for, and so much more."
 type: travel
 date: 2025-09-22
-venue: "Coimbatore"
+venue: "MAS → CBE"
 featured: true
+images:
+  - { src: ./photo-1.jpg, alt: 'Placeholder image for the Coimbatore travel story' }
 ---
 We got down at the Coimbatore railway station at the crack of dawn. Everything around us was full throttle. People darted across platforms, autos honked like there’s no tomorrow, and the faint smell of hot idlis and coffee hung in the air. We braced ourselves for a hectic weekend. But just a few minutes out, the whole town felt like it hadn’t woken up. The streets yawned, the shutters slept, and we were the only ones moving. Classic bait and switch.
 
