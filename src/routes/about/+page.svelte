@@ -1,5 +1,5 @@
 <script>
-	import portrait from '$lib/assets/portrait.jpg?enhanced';
+	import portrait from '$lib/assets/portrait.jpg?enhanced&quality=80';
 	import Polaroid from '$lib/components/Polaroid.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import { profile } from '$lib/data/profile.js';

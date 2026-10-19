@@ -11,7 +11,7 @@
 	let route = $derived(story.type === 'travel' ? splitRoute(story.venue) : null);
 
 	const containers = {
-		food: 'edge-zigzag bg-receipt pb-3',
+		food: 'edge-zigzag pb-3',
 		culture: 'rounded-md bg-ticket text-ticket-ink',
 		travel: 'rounded-xl bg-receipt'
 	};
@@ -63,10 +63,8 @@
 			<div
 				aria-hidden="true"
 				class="flex w-10 shrink-0 items-center justify-center border-l-2 border-dashed border-ticket-ink/30">
-				<span class="rotate-90 font-mono text-xs tracking-widest whitespace-nowrap">ADMIT ONE</span>
-			</div>
-		{:else if story.type === 'travel'}
-			<div aria-hidden="true" class="w-8 shrink-0 border-l-2 border-dashed border-line bg-boarding">
+				<span class="rotate-90 font-mono text-xs tracking-widest whitespace-nowrap opacity-50"
+					>ADMIT ONE</span>
 			</div>
 		{/if}
 	</div>

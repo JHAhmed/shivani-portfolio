@@ -27,6 +27,9 @@ export function draggable(node, options = {}) {
 				inertia: true,
 				edgeResistance: 0.85,
 				zIndexBoost: true,
+				// 2D transforms only: translate3d promotes the element to its own layer, which Chrome
+				// rasterises flat and then rotates, blurring the tilted note's text.
+				force3D: false,
 				cursor: 'grab',
 				activeCursor: 'grabbing'
 			});

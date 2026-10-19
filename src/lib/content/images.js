@@ -1,7 +1,10 @@
+// enhanced-img outputs AVIF, WebP and a JPG/PNG fallback. Without a `quality` directive, sharp's
+// defaults apply (AVIF 50, which visibly smears photos). 80 applies to every format. Vite needs
+// glob options as literals, so the same value also appears in the `?enhanced&quality=80` imports.
 const pictures = import.meta.glob('/src/content/stories/*/*.{jpg,jpeg,png,webp}', {
 	eager: true,
 	import: 'default',
-	query: { enhanced: true }
+	query: { enhanced: true, quality: 80 }
 });
 
 /**

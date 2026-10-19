@@ -30,6 +30,7 @@ venue: 'Rasanai, Chennai' # travel routes as 'MAS → CBE'
 publication: 'Indulge, The New Indian Express' # omit for original pieces
 sourceUrl: 'https://www.indulgexpress.com/…' # omit for original pieces
 fullText: false # true only once republication is cleared
+readTime: 10 # optional minutes; set it for excerpts, otherwise it's counted from the text
 context: 'Optional 1–3 sentences on how the story was reported.'
 featured: true # show on the home page
 clipping: ./clipping.jpg # optional

@@ -106,6 +106,11 @@ export function parseStory({ slug, raw, assetKeys }) {
 	}
 	const fullText = sourceUrl ? data.fullText === true : true;
 
+	// Excerpt-only files hold just the opening, so their read time can be set by hand.
+	if (data.readTime !== undefined && !(Number.isInteger(data.readTime) && data.readTime > 0)) {
+		throw new Error(`${file}: readTime must be a whole number of minutes`);
+	}
+
 	return {
 		slug,
 		title: String(data.title),
@@ -120,7 +125,7 @@ export function parseStory({ slug, raw, assetKeys }) {
 		featured: data.featured === true,
 		images,
 		clipping: data.clipping ? resolveAsset(file, slug, data.clipping, 'clipping', assetKeys) : null,
-		readTime: readTime(content),
+		readTime: data.readTime ?? readTime(content),
 		html: /** @type {string} */ (
 			marked.parse(fullText ? content : excerptMarkdown(content), { async: false })
 		),

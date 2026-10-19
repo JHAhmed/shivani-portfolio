@@ -6,7 +6,7 @@
 </script>
 
 <header class="mx-auto max-w-xl paper stamp-in" style:--tilt="-0.6deg">
-	<div class="bg-receipt px-6 pt-8 pb-12 font-mono text-sm edge-zigzag sm:px-10">
+	<div class="px-6 pt-8 pb-12 font-mono text-sm edge-zigzag sm:px-10">
 		<p class="text-center tracking-[0.2em] uppercase">{story.publication ?? 'Shivani Illakiya'}</p>
 		{#if story.venue}<p class="mt-1 text-center text-muted">{story.venue}</p>{/if}
 		<p aria-hidden="true" class="my-5 overflow-hidden text-center whitespace-nowrap text-muted">

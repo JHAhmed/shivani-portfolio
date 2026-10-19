@@ -7,6 +7,7 @@ venue: 'Rasanai, Chennai'
 publication: 'Indulge, The New Indian Express'
 sourceUrl: 'https://www.indulgexpress.com/food/food-chennai/2026/Oct/03/under-watchful-eyes-a-chennai-dining-room-serves-up-the-souths-many-stories'
 fullText: false
+readTime: 3
 featured: true
 images:
   - { src: ./photo-1.jpg, alt: 'Placeholder image for the Rasanai story' }

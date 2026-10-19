@@ -2,7 +2,7 @@
 	import { profile } from '$lib/data/profile.js';
 </script>
 
-<div class="drop-shadow-sm" style="rotate: -1deg">
+<div style="rotate: -1deg">
 	<div
 		class="relative bg-tag py-4 pr-6 pl-12 text-tag-ink [clip-path:polygon(22px_0,100%_0,100%_100%,22px_100%,0_50%)]">
 		<span

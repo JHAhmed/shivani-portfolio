@@ -91,6 +91,17 @@ describe('parseStory', () => {
 		);
 	});
 
+	it('lets frontmatter override read time, for excerpts of longer pieces', () => {
+		expect(parse(BASE).readTime).toBe(1);
+		expect(parse({ ...BASE, readTime: 10 }).readTime).toBe(10);
+		expect(() => parse({ ...BASE, readTime: 0 })).toThrow(
+			'readTime must be a whole number of minutes'
+		);
+		expect(() => parse({ ...BASE, readTime: '5 min' })).toThrow(
+			'readTime must be a whole number of minutes'
+		);
+	});
+
 	it('rejects a sourceUrl that is not http(s)', () => {
 		expect(() => parse({ ...BASE, sourceUrl: 'indulgexpress.com/x' })).toThrow(
 			'sourceUrl must be an http(s) URL'

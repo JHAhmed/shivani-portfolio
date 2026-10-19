@@ -12,7 +12,7 @@
 </svelte:head>
 
 <section class="mx-auto max-w-xl py-24 text-center">
-	<div class="mx-auto inline-block paper" style:--tilt="-2deg">
+	<div class="mx-auto inline-block" style="rotate: -2deg">
 		<div
 			class="bg-tag py-6 pr-10 pl-14 text-left text-tag-ink [clip-path:polygon(24px_0,100%_0,100%_100%,24px_100%,0_50%)]">
 			<p class="font-mono text-xs tracking-wider uppercase">Baggage claim · {status}</p>
