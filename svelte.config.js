@@ -7,10 +7,8 @@ const config = {
 	kit: {
 		adapter: adapter({ fallback: '404.html' }),
 		prerender: {
-			entries: ['*'],
-			// TEMPORARY: the nav links to pages that later tasks create. Task 12 removes this line
-			// so broken links fail the build again.
-			handleHttpError: 'warn'
+			// Endpoints aren't linked from pages, so list them explicitly. Broken links fail the build.
+			entries: ['*', '/sitemap.xml', '/llms.txt']
 		}
 	}
 };
