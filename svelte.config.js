@@ -5,10 +5,12 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter({ fallback: '404.html' }),
+		// No options: adapter-static only uses Vercel's zero-config output when called bare.
+		adapter: adapter(),
 		prerender: {
-			// Endpoints aren't linked from pages, so list them explicitly. Broken links fail the build.
-			entries: ['*', '/sitemap.xml', '/llms.txt']
+			// Endpoints and the 404 page aren't linked from pages, so list them explicitly.
+			// Broken links fail the build.
+			entries: ['*', '/sitemap.xml', '/llms.txt', '/404']
 		}
 	}
 };
