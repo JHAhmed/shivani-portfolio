@@ -40,3 +40,67 @@
 		background-color: var(--color-note);
 	}
 }
+
+/* A paper object resting at a slight tilt; it straightens and lifts on hover or focus.
+   drop-shadow (not box-shadow) so masked and clipped shapes cast the right shadow. */
+@utility paper {
+	rotate: var(--tilt, 0deg);
+	filter: drop-shadow(0 1px 1px rgb(31 29 26 / 0.12));
+	transition:
+		rotate 150ms ease-out,
+		translate 150ms ease-out,
+		filter 150ms ease-out;
+
+	@media (max-width: 40rem) {
+		rotate: calc(var(--tilt, 0deg) / 2);
+	}
+
+	&:hover,
+	&:focus-within {
+		filter: drop-shadow(0 10px 14px rgb(31 29 26 / 0.22));
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		&:hover,
+		&:focus-within {
+			rotate: 0deg;
+			translate: 0 -3px;
+		}
+	}
+}
+
+/* Receipt tear: zigzag bottom edge. */
+@utility edge-zigzag {
+	--zig: 14px;
+	mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / var(--zig)
+		100%;
+}
+
+@keyframes stamp-in {
+	from {
+		opacity: 0;
+		scale: 1.05;
+	}
+	to {
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Story-page header entrance; a plain fade under reduced motion. */
+@utility stamp-in {
+	animation: fade-in 300ms ease-out both;
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: stamp-in 320ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+	}
+}
