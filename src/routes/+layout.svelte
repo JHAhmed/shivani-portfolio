@@ -1,9 +1,12 @@
 <script>
+	import '@fontsource-variable/urbanist';
+	import '@fontsource-variable/caveat';
+	import '@fontsource/ibm-plex-mono/400.css';
+	import '@fontsource/ibm-plex-mono/500.css';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Menu from '$components/Menu.svelte';
-	import Cursor from '$components/Cursor.svelte';
+	import SiteFooter from '$lib/components/SiteFooter.svelte';
+	import SiteHeader from '$lib/components/SiteHeader.svelte';
 
 	let { children } = $props();
 </script>
@@ -12,24 +15,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<Cursor isActive={true} />
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-	<filter id="noise">
-		<feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-		<feComponentTransfer>
-			<feFuncA type="linear" slope="1.5" />
-		</feComponentTransfer>
-		<feColorMatrix type="saturate" values="0" />
-		<feBlend in="SourceGraphic" mode="multiply" />
-	</filter>
-</svg>
-
-<!-- <Navbar /> -->
-
-<!-- <div class="relative min-h-screen overflow-x-hidden bg-gray-50"> -->
-	<div class="absolute inset-0 z-0" style="filter: url(#noise); opacity: 0.2;"></div>
-
-	<div class="selection:bg-secondary">{@render children?.()}</div>
-	<Menu />
-<!-- </div> -->
+<SiteHeader />
+<main id="main" tabindex="-1" class="mx-auto max-w-6xl px-4 outline-none sm:px-6">
+	{@render children()}
+</main>
+<SiteFooter />
