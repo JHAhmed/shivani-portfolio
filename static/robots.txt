@@ -1,3 +1,5 @@
-# allow crawling everything by default
+# Allow every search and AI crawler.
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://shivani-illakiya.com/sitemap.xml

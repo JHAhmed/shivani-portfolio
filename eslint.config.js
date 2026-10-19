@@ -23,5 +23,11 @@ export default [
 	{
 		files: ['**/*.svelte', '**/*.svelte.js'],
 		languageOptions: { parserOptions: { svelteConfig } }
+	},
+	{
+		rules: {
+			// The site is served from the domain root with no `paths.base`, so plain hrefs are correct.
+			'svelte/no-navigation-without-resolve': 'off'
+		}
 	}
 ];
