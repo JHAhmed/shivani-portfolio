@@ -17,7 +17,11 @@
 
 <section class="grid gap-12 pt-12 md:grid-cols-[1fr_1.5fr] md:items-start">
 	<div class="mx-auto w-60 md:mt-6">
-		<Polaroid src={portrait} alt="Portrait of Shivani Illakiya" caption="Chennai" tilt={-3} />
+		<Polaroid
+			src={portrait}
+			alt="Shivani Illakiya standing in a stone doorway, with snow-capped mountains behind her"
+			caption="on the road"
+			tilt={-3} />
 	</div>
 	<div>
 		<h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">About</h1>

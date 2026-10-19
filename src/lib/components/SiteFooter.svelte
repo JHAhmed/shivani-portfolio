@@ -10,7 +10,7 @@
 	].filter((link) => link.href);
 </script>
 
-<footer id="contact" class="mt-24 border-t border-line">
+<footer id="contact" class="mt-12 border-t border-line">
 	<div
 		class="mx-auto flex max-w-6xl flex-col items-start gap-10 px-4 py-14 sm:px-6 md:flex-row md:items-center md:justify-between">
 		<div>

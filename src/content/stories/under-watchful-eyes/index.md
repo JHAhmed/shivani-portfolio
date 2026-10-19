@@ -10,8 +10,8 @@ fullText: false
 readTime: 3
 featured: true
 images:
-  - { src: ./photo-1.jpg, alt: 'Placeholder image for the Rasanai story' }
-  - { src: ./photo-2.jpg, alt: 'Second placeholder image for the Rasanai story' }
+  - { src: ./photo-1.jpg, alt: "Sixteen painted drishti bommai masks in rows on Rasanai's dining-room wall, under woven lampshades" }
+  - { src: ./photo-2.jpg, alt: 'Fried seafood on a banana leaf, topped with sliced onion and microgreens, with a wedge of lime' }
 ---
 
 The moment you enter Rasanai, you are greeted not by soft lighting or music, but by sixteen drishti bommais staring straight back at you. Hung in perfect symmetry on a wall facing the dining area, these protective talismans are usually meant to guard thresholds and exteriors. Here, they peer inward, as if keeping watch over every celebration that unfolds within. Over first dates and family reunions, celebratory lunches and quiet solo meals, whispered conversations, reconciliations, spontaneous proposals and long overdue catch-ups, the bommais seem to stand guard, absorbing it all and keeping the space untouched by anything unwanted.

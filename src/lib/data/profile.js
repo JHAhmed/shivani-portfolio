@@ -33,7 +33,7 @@ export const profile = {
 	experience: [
 		{
 			org: 'Indulge, The New Indian Express',
-			role: 'Reporter & Sub-editor | Food Correspondent',
+			role: 'Reporter & Sub-Editor | Food Correspondent',
 			location: 'Chennai, Tamil Nadu',
 			start: '2024-10',
 			end: null,
@@ -80,7 +80,7 @@ export const profile = {
 					text: "Assisted the editor with mast-page production, gaining exposure to the newspaper's front-page editorial workflow."
 				},
 				{
-					text: "Contributed features coverage of notable cultural events across the city, producing stories that generated strong readership and ranked among the most-viewed articles on the publication's internal platform"
+					text: "Contributed features coverage of notable cultural events across the city, producing stories that generated strong readership and ranked among the most-viewed articles on the publication's internal platform."
 				}
 			]
 		},

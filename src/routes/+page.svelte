@@ -44,7 +44,7 @@
 		<Polaroid
 			drag
 			src={portrait}
-			alt="Portrait of Shivani Illakiya"
+			alt="Shivani Illakiya standing in a stone doorway, with snow-capped mountains behind her"
 			caption="that's me!"
 			tilt={-5}
 			class="absolute top-0 left-2 w-52" />

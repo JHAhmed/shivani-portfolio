@@ -9,7 +9,7 @@ fullText: false
 readTime: 10
 featured: true
 images:
-  - { src: ./photo-1.jpg, alt: 'Placeholder image for the Maalavika Sundar interview' }
+  - { src: ./photo-1.jpg, alt: 'Maalavika Sundar performing on stage in orange-tinted sunglasses, under red stage lights' }
 ---
 
 For as long as Maalavika Sundar can remember, music has been both her discipline and her escape. A Carnatic singer who began learning music at two-and-a-half, she spent years training under her guru before stepping into the wider world of performance. She first came into the public eye through Super Singer 3, and Indian Idol, before making her playback singing debut with Dang Dang in Manam Kothi Paravai, a song that earned her the nickname Dang Dang Maalavika. Since then, she has moved between playback singing, Carnatic performance, independent music, and acting, making her film debut with Velvet Nagaram in 2020.

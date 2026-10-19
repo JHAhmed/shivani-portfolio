@@ -6,7 +6,7 @@ date: 2025-09-22
 venue: "MAS → CBE"
 featured: true
 images:
-  - { src: ./photo-1.jpg, alt: 'Placeholder image for the Coimbatore travel story' }
+  - { src: ./photo-1.jpg, alt: 'A dining hall with a high tiled roof, dark wooden beams, cane-backed chairs and a stone floor' }
 ---
 We got down at the Coimbatore railway station at the crack of dawn. Everything around us was full throttle. People darted across platforms, autos honked like there’s no tomorrow, and the faint smell of hot idlis and coffee hung in the air. We braced ourselves for a hectic weekend. But just a few minutes out, the whole town felt like it hadn’t woken up. The streets yawned, the shutters slept, and we were the only ones moving. Classic bait and switch.
 

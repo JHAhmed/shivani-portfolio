@@ -5,9 +5,11 @@
 	let { story } = $props();
 
 	let route = $derived(splitRoute(story.venue));
+	// Repeated down the stub: the route codes (e.g. MASCBE), or a generic label without a route.
+	let stubLines = $derived(Array(6).fill(route ? `${route[0]}${route[1]}` : 'TRAVEL'));
 </script>
 
-<header class="mx-auto max-w-2xl paper stamp-in" style:--tilt="-0.5deg">
+<header class="mx-auto max-w-2xl paper stamp-in rounded-2xl" style:--tilt="-0.5deg">
 	<div class="flex overflow-hidden rounded-2xl bg-receipt">
 		<div class="flex-1 px-6 py-8 sm:px-10">
 			<p class="font-mono text-xs tracking-[0.2em] text-muted uppercase">Boarding pass · Travel</p>
@@ -45,7 +47,14 @@
 				</div>
 			</dl>
 		</div>
-		<div aria-hidden="true" class="w-12 shrink-0 border-l-2 border-dashed border-paper bg-boarding">
+		<div
+			aria-hidden="true"
+			class="w-12 shrink-0 items-center justify-center border-l-2 border-dashed border-paper bg-travel bg-clip-content">
+			<p class="rotate-90 font-semibold tracking-widest opacity-25">
+				{#each stubLines as line, i (i)}
+					{line}
+				{/each}
+			</p>
 		</div>
 	</div>
 </header>

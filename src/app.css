@@ -11,10 +11,13 @@
 	--color-muted: #5b554c;
 	--color-line: #e5e0d6;
 	--color-receipt: #fffefb;
-	--color-ticket: #f6c9b9;
-	--color-ticket-ink: #5c2412;
-	--color-boarding: #bfe3d6;
-	--color-boarding-ink: #0f3d33;
+	/* One paper colour per beat (plus a dark text colour that reads on it). */
+	--color-food: #fbe3b8;
+	--color-food-ink: #5a3d0a;
+	--color-culture: #e5dcf6;
+	--color-culture-ink: #3d2a6b;
+	--color-travel: #c9e8dc;
+	--color-travel-ink: #0f3d33;
 	--color-note: #fde68a;
 	--color-note-ink: #4a3a05;
 	--color-tag: #e9d9b8;
@@ -41,13 +44,14 @@
 	}
 }
 
-/* A paper object resting at a slight tilt; it straightens and lifts on hover or focus.
-   drop-shadow (not box-shadow) so masked and clipped shapes cast the right shadow. */
+/* A paper object resting at a slight tilt; it straightens and lifts on hover or focus. */
 @utility paper {
 	rotate: var(--tilt, 0deg);
 	/* box-shadow, never filter/mask: on a rotated element those make Chrome paint it flat into a
-	   bitmap and then rotate the bitmap, which visibly blurs the text. */
-	box-shadow: 0 1px 2px rgb(31 29 26 / 0.12);
+	   bitmap and then rotate the bitmap, which visibly blurs the text. box-shadow follows
+	   border-radius, so put `paper` on the element that has the shape. Shapes it can't follow
+	   (the zigzag) switch it off via --paper-shadow and draw their own. */
+	box-shadow: var(--paper-shadow, 0 1px 2px rgb(31 29 26 / 0.12));
 	transition:
 		rotate 150ms ease-out,
 		translate 150ms ease-out,
@@ -59,7 +63,8 @@
 
 	&:hover,
 	&:focus-within {
-		box-shadow: 0 12px 20px -10px rgb(31 29 26 / 0.3);
+		box-shadow: var(--paper-shadow-hover, 0 12px 20px -10px rgb(31 29 26 / 0.3));
+		--zig-shadow: rgb(31 29 26 / 0.2);
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -71,14 +76,32 @@
 	}
 }
 
-/* Receipt tear: zigzag bottom edge, painted as receipt-coloured backgrounds rather than a mask
-   (a mask blurs rotated text, see `paper`). Provides its own background colour. */
+/* Receipt tear: zigzag bottom edge, painted with backgrounds rather than a mask (a mask blurs
+   rotated text, see `paper`). Layers, top first: the paper's teeth 2px up, the same teeth in a
+   shadow colour at the very bottom (so a sliver shows under each tooth), then the paper body.
+   Provides its own background colour: set --paper-color to tint it. */
 @utility edge-zigzag {
 	--zig: 14px;
+	--zig-lift: 2px;
+	--paper-shadow: none;
+	--paper-shadow-hover: none;
 	background:
-		conic-gradient(from -45deg at bottom, #0000, var(--color-receipt) 1deg 89deg, #0000 90deg)
-			bottom / var(--zig) calc(var(--zig) / 2) repeat-x,
-		linear-gradient(var(--color-receipt) 0 0) top / 100% calc(100% - var(--zig) / 2 + 1px) no-repeat;
+		conic-gradient(
+				from -45deg at bottom,
+				#0000,
+				var(--paper-color, var(--color-receipt)) 1deg 89deg,
+				#0000 90deg
+			)
+			left 0 bottom var(--zig-lift) / var(--zig) calc(var(--zig) / 2) repeat-x,
+		conic-gradient(
+				from -45deg at bottom,
+				#0000,
+				var(--zig-shadow, rgb(31 29 26 / 0.12)) 1deg 89deg,
+				#0000 90deg
+			)
+			left 0 bottom 0 / var(--zig) calc(var(--zig) / 2) repeat-x,
+		linear-gradient(var(--paper-color, var(--color-receipt)) 0 0) top / 100%
+			calc(100% - var(--zig) / 2 - var(--zig-lift) + 1px) no-repeat;
 }
 
 @keyframes stamp-in {
