@@ -2,6 +2,7 @@
 	import portrait from '$lib/assets/portrait.jpg?enhanced';
 	import Polaroid from '$lib/components/Polaroid.svelte';
 	import Seo from '$lib/components/Seo.svelte';
+	import Signature from '$lib/components/Signature.svelte';
 	import StickyNote from '$lib/components/StickyNote.svelte';
 	import StoryCard from '$lib/components/StoryCard.svelte';
 	import { TILTS } from '$lib/content/types.js';
@@ -20,6 +21,7 @@
 <section class="grid items-center gap-12 pt-10 pb-16 md:grid-cols-[1.3fr_1fr] md:pt-20">
 	<div>
 		<h1 class="text-5xl font-semibold tracking-tight sm:text-6xl">{profile.name}</h1>
+		<div class="mt-3"><Signature /></div>
 		<p class="mt-5 max-w-xl text-2xl leading-snug text-balance sm:text-3xl">
 			Food, travel and culture stories from Chennai.
 		</p>
@@ -40,13 +42,15 @@
 
 	<div data-drag-bounds class="relative mx-auto h-80 w-full max-w-sm">
 		<Polaroid
+			drag
 			src={portrait}
 			alt="Portrait of Shivani Illakiya"
 			caption="that's me!"
 			tilt={-5}
 			class="absolute top-0 left-2 w-52" />
-		<StickyNote tilt={4} class="absolute top-44 right-0 w-40">{profile.highlights[0]}</StickyNote>
-		<StickyNote tilt={-3} color="blue" class="absolute top-4 right-1 w-36"
+		<StickyNote drag tilt={4} class="absolute top-44 right-0 w-40"
+			>{profile.highlights[0]}</StickyNote>
+		<StickyNote drag tilt={-3} color="blue" class="absolute top-4 right-1 w-36"
 			>{profile.highlights[1]}</StickyNote>
 	</div>
 </section>
