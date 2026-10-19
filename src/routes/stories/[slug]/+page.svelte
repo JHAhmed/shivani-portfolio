@@ -48,7 +48,7 @@
 		<p class="mt-10 border border-line bg-receipt p-5">
 			This is an excerpt.
 			<a href={story.sourceUrl} class="font-semibold underline underline-offset-4"
-				>Read the full story on {source} →</a>
+				>Read the full story on {source}</a>
 		</p>
 	{:else if story.sourceUrl}
 		<p class="mt-10 text-muted">
@@ -67,6 +67,6 @@
 	{/if}
 
 	<p class="mt-14">
-		<a href="/stories" class="font-semibold underline underline-offset-4">← All stories</a>
+		<a href="/stories" class="font-semibold underline underline-offset-4">All stories</a>
 	</p>
 </article>

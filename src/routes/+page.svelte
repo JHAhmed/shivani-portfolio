@@ -21,7 +21,6 @@
 <section class="grid items-center gap-12 pt-10 pb-16 md:grid-cols-[1.3fr_1fr] md:pt-20">
 	<div>
 		<h1 class="text-5xl font-semibold tracking-tight sm:text-6xl">{profile.name}</h1>
-		<div class="mt-3"><Signature /></div>
 		<p class="mt-5 max-w-xl text-2xl leading-snug text-balance sm:text-3xl">
 			Food, travel and culture stories from Chennai.
 		</p>
@@ -58,7 +57,7 @@
 <section class="py-12" aria-labelledby="featured-title">
 	<div class="flex flex-wrap items-end justify-between gap-4">
 		<h2 id="featured-title" class="text-3xl font-semibold tracking-tight">Featured stories</h2>
-		<a href="/stories" class="font-semibold underline underline-offset-4">All stories →</a>
+		<a href="/stories" class="font-semibold underline underline-offset-4">All stories</a>
 	</div>
 	<ul class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 		{#each data.stories as story, i (story.slug)}
@@ -70,10 +69,13 @@
 <section class="grid gap-12 py-12 md:grid-cols-2">
 	<div>
 		<h2 class="text-3xl font-semibold tracking-tight">About</h2>
+		<div class="mt-4"><Signature /></div>
 		<p class="mt-4 text-lg leading-relaxed">{profile.bio[0]}</p>
 		<a href="/about" class="mt-4 inline-block font-semibold underline underline-offset-4"
-			>More about me →</a>
+			>More about me</a>
+
 	</div>
+
 	<div>
 		<h2 class="text-3xl font-semibold tracking-tight">Experience</h2>
 		<ol class="mt-4 divide-y divide-line">
@@ -85,6 +87,6 @@
 			{/each}
 		</ol>
 		<a href="/resume" class="mt-4 inline-block font-semibold underline underline-offset-4"
-			>Full resume →</a>
+			>Full resume</a>
 	</div>
 </section>

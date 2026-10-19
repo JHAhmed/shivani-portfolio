@@ -7,9 +7,9 @@ export const profile = {
 	email: 'shivani.p.t.illakiya@gmail.com',
 	links: {
 		/** @type {string | null} */
-		linkedin: null,
+		linkedin: "https://www.linkedin.com/in/shivani-illakiya",
 		/** @type {string | null} */
-		instagram: null
+		instagram: "https://www.instagram.com/shivani_illakiya"
 	},
 	worksFor: { name: 'Indulge, The New Indian Express', url: 'https://www.indulgexpress.com' },
 	knowsAbout: [
@@ -26,9 +26,10 @@ export const profile = {
 	summary:
 		'Journalist and Food Correspondent at Indulge, The New Indian Express, with a background in reporting, editing and developing original stories for print and digital. A quick learner who takes initiative, adapts to new responsibilities, and takes ownership of stories from ideation to publication. Passionate about travel and exploring destinations through their food, people, design, heritage and local experiences. Skilled in coordinating with editorial teams, contributors, and industry professionals, with working knowledge of Adobe InDesign and Quintype CMS.',
 	bio: [
-		"I'm a journalist and the food correspondent at Indulge, The New Indian Express, in Chennai. I track down the city's new restaurants, pop-ups and food trends, and keep our two-page food section full.",
-		'I like getting to know a place through its food, its people, its design and its heritage, whether that place is a new dining room down the road or a town I have travelled to.',
-		"Before Indulge I was a sub-editor at Daily Thanthi's DT Next, and I started out as an intern at The Hindu's MetroPlus, where I wrote a front-page lead for the Madras Day edition. I studied English at Ethiraj College for Women and Loyola College."
+		`Oscar Wilde's "If you want to be a grocer, or a general, or a politician, or a judge, you will invariably become it; that is your punishment," landed her in lifestyle journalism, and she has no complaints. She covers travel stories because she has never quite believed that one life, lived in one place, is ever going to be enough. Bourdainism, she suspects, will continue to guide the rest of her life. As a food correspondent, she is always on a hunt for history-soaked menus, but also detours into theatres, galleries, and comedy clubs, and has sat across enough celebrities and stand-up comedians to know that passion towards a craft, in any room, sounds the same.`,
+		// "I'm a journalist and the food correspondent at Indulge, The New Indian Express, in Chennai. I track down the city's new restaurants, pop-ups and food trends, and keep our two-page food section full.",
+		// 'I like getting to know a place through its food, its people, its design and its heritage, whether that place is a new dining room down the road or a town I have travelled to.',
+		// "Before Indulge I was a sub-editor at Daily Thanthi's DT Next, and I started out as an intern at The Hindu's MetroPlus, where I wrote a front-page lead for the Madras Day edition. I studied English at Ethiraj College for Women and Loyola College."
 	],
 	experience: [
 		{

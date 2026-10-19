@@ -34,6 +34,6 @@
 
 	<p class="mt-14">
 		<a href={site.indulgeAuthorUrl} class="font-semibold underline underline-offset-4"
-			>See all my published work on Indulge →</a>
+			>See all my published work on Indulge</a>
 	</p>
 </section>

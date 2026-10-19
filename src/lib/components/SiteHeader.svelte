@@ -1,12 +1,13 @@
 <script>
 	import { page } from '$app/state';
 	import { site } from '$lib/data/site.js';
+	import favicon from '$lib/assets/favicon.svg'
 
 	const links = [
 		{ href: '/stories', label: 'Stories' },
 		{ href: '/about', label: 'About' },
 		{ href: '/resume', label: 'Resume' },
-		{ href: '#contact', label: 'Contact' }
+		// { href: '#contact', label: 'Contact' }
 	];
 
 	/** @param {string} href */
@@ -23,8 +24,10 @@
 
 <header
 	class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-8 px-4 pt-5 sm:px-6">
-	<a href="/" class="inline-flex min-h-11 items-center text-lg font-semibold tracking-tight"
-		>{site.name}</a>
+	<a href="/" class="inline-flex min-h-11 items-center text-lg font-semibold tracking-tight">
+		<!-- {site.name} -->
+		<img src={favicon} class="w-full h-10" alt="">
+	</a>
 	<nav aria-label="Main">
 		<ul class="flex gap-5 text-[0.95rem] text-muted sm:gap-7">
 			{#each links as link (link.href)}

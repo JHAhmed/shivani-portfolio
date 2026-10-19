@@ -31,12 +31,25 @@
 				<li>
 					<a
 						href={site.resumePdf}
-						download
+						target="_blank"
 						class="inline-flex min-h-11 items-center underline underline-offset-4">Resume (PDF)</a>
 				</li>
 			</ul>
 		</div>
 		<LuggageTag />
 	</div>
-	<p class="mx-auto max-w-6xl px-4 pb-8 text-sm text-muted sm:px-6">© {buildYear} {site.name}</p>
+
+	<div class="flex w-full justify-between mx-auto max-w-6xl">
+		<p class=" px-4 pb-8 text-sm text-muted sm:px-6">© {buildYear} {site.name}</p>
+
+		<a
+			href="https://wurks.studio/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="font-normal text-sm text-gray-600"
+			>By <span
+				class="font-semibold text-purple-600 decoration-purple-600 decoration-1 underline-offset-2 hover:underline"
+				>Wurks</span
+			>.</a>
+	</div>
 </footer>
