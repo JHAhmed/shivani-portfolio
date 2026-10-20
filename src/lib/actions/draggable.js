@@ -8,7 +8,7 @@
 export function draggable(node, options = {}) {
 	if (options.enabled === false) return;
 	const allowed =
-		window.matchMedia('(pointer: fine)').matches &&
+		// window.matchMedia('(pointer: fine)').matches &&
 		!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	if (!allowed) return;
 
@@ -26,6 +26,7 @@ export function draggable(node, options = {}) {
 				bounds: bounds ?? undefined,
 				inertia: true,
 				edgeResistance: 0.85,
+				dragClickables: true,
 				zIndexBoost: true,
 				// 2D transforms only: translate3d promotes the element to its own layer, which Chrome
 				// rasterises flat and then rotates, blurring the tilted note's text.

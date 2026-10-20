@@ -22,7 +22,7 @@
 	<div>
 		<h1 class="text-5xl font-semibold tracking-tight sm:text-6xl">{profile.name}</h1>
 		<p class="mt-5 max-w-xl text-2xl leading-snug text-balance sm:text-3xl">
-			Food, travel and culture stories from Chennai.
+			Food, travel, and culture stories from Chennai.
 		</p>
 		<p class="mt-4 max-w-xl text-lg text-muted">
 			{profile.headline} at <em>Indulge</em>, The New Indian Express.

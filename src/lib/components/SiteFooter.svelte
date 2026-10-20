@@ -40,13 +40,13 @@
 	</div>
 
 	<div class="flex w-full justify-between mx-auto max-w-6xl">
-		<p class=" px-4 pb-8 text-sm text-muted sm:px-6">© {buildYear} {site.name}</p>
+		<p class="px-4 pb-8 text-sm text-muted sm:px-6">© {buildYear} {site.name}</p>
 
 		<a
 			href="https://wurks.studio/"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="font-normal text-sm text-gray-600"
+			class="font-normal text-sm text-gray-600 px-4"
 			>By <span
 				class="font-semibold text-purple-600 decoration-purple-600 decoration-1 underline-offset-2 hover:underline"
 				>Wurks</span

@@ -46,7 +46,7 @@ export const profile = {
 				},
 				{
 					label: 'Features and City Coverage',
-					text: 'Develop and report original features across food, travel, hospitality, culture and city life, exploring local communities, heritage and changing lifestyles. Identified over 40 new dining establishments for coverage, contributing to my transition into the Food Correspondent role.'
+					text: 'Develop and report original features across food, travel, hospitality, culture, and city life, exploring local communities, heritage and changing lifestyles. Identified over 40 new dining establishments for coverage, contributing to my transition into the Food Correspondent role.'
 				},
 				{
 					label: 'Column and Commercial Coordination',

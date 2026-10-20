@@ -15,13 +15,13 @@
 
 <Seo
 	title="Stories"
-	description="Food, travel and culture stories reported and written by Shivani Illakiya."
+	description="Food, travel, and culture stories reported and written by Shivani Illakiya."
 	path="/stories" />
 
 <section class="pt-12">
 	<h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">Stories</h1>
 	<p class="mt-3 max-w-2xl text-lg text-muted">
-		Food, travel and culture stories I've reported and written, mostly from Chennai.
+		Food, travel, and culture stories I've reported and written, mostly from Chennai.
 	</p>
 
 	<div class="mt-8"><TypeFilter bind:value={active} /></div>

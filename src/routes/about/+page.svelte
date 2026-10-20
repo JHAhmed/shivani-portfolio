@@ -10,7 +10,7 @@
 <Seo
 	title="About"
 	description="About {profile.name}: {profile.headline} at {profile.worksFor
-		.name}, covering food, travel and culture in Chennai."
+		.name}, covering food, travel, and culture in Chennai."
 	path="/about"
 	type="profile"
 	jsonLd={[profilePageJsonLd(site, profile, absoluteUrl(site.url, portrait.img.src))]} />

@@ -64,7 +64,7 @@
 	&:hover,
 	&:focus-within {
 		box-shadow: var(--paper-shadow-hover, 0 12px 20px -10px rgb(31 29 26 / 0.3));
-		--zig-shadow: rgb(31 29 26 / 0.2);
+		/* --zig-shadow: rgb(31 29 26 / 0.2); */
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -96,7 +96,7 @@
 		conic-gradient(
 				from -45deg at bottom,
 				#0000,
-				var(--zig-shadow, rgb(31 29 26 / 0.12)) 1deg 89deg,
+				/* var(--zig-shadow, rgb(31 29 26 / 0.12)) 1deg 89deg, */
 				#0000 90deg
 			)
 			left 0 bottom 0 / var(--zig) calc(var(--zig) / 2) repeat-x,

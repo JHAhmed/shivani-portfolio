@@ -25,7 +25,7 @@ export function buildLlmsTxt({ site, profile, stories }) {
 	return [
 		`# ${profile.name}`,
 		'',
-		`> ${profile.headline} at ${profile.worksFor.name}, based in ${profile.location}. Writes about food, travel and culture.`,
+		`> ${profile.headline} at ${profile.worksFor.name}, based in ${profile.location}. Writes about food, travel, and culture.`,
 		'',
 		profile.summary,
 		'',
